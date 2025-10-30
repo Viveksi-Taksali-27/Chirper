@@ -35,30 +35,37 @@ It’s designed as a beginner-friendly project to understand how authentication,
 ---
 
 ## ⚙️ Setup Instructions
-
+```bash
 ### 1️⃣ Clone the repository
 git clone https://github.com/Viveksi-Taksali-27/Chirper.git
 cd Chirper
-
+```
+```bash
 ### 2️⃣ Create and activate a virtual environment
 python -m venv venv
 venv\Scripts\activate       # On Windows
-# or
+### or
 source venv/bin/activate    # On macOS/Linux
+```
+```bash
 ### 3️⃣ Install dependencies
 pip install django
-
+```
+```bash
 ### 4️⃣ Apply migrations
 python manage.py migrate
-
+```
+```bash
 ### 5️⃣ Run the development server
 python manage.py runserver
-
-
+```
+```bash
 Then open your browser and visit 👉
 http://127.0.0.1:8000/
+```
 
 ## 📁 Project Structure
+```bash
 Chirper/
 ├── Chirper/
 │   ├── settings.py
@@ -94,8 +101,8 @@ Chirper/
 ├── manage.py
 ├── db.sqlite3
 └── .gitignore
-
-🧩 How It Works
+```
+## 🧩 How It Works
 
 Users register using a simple signup form.
 
@@ -132,3 +139,4 @@ Just open your project folder → create a new file named **`README.md`** → pa
 git add README.md
 git commit -m "Added project README"
 git push origin main
+```
