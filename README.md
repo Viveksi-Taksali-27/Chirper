@@ -114,6 +114,15 @@ Users can edit or delete only their own tweets.
 
 Search bar allows filtering tweets by text or username.
 
+##📸 Screenshots
+
+![🖼️ Home Page](C:\Users\vinit\OneDrive\Pictures\Screenshots 1)
+
+![📝 Tweet Creation Form](C:\Users\vinit\OneDrive\Pictures\Screenshots 1)
+
+![🔍 Search Results Page](C:\Users\vinit\OneDrive\Pictures\Screenshots 1)
+
+
 ## 💡 Future Enhancements
 
 User profile pages with bio & followers
