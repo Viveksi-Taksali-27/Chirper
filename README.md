@@ -37,7 +37,6 @@ It’s designed as a beginner-friendly project to understand how authentication,
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/Viveksi-Taksali-27/Chirper.git
 cd Chirper
 
