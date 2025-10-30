@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Chirper | {% if form.instance.pk %}Edit Tweet{% else %}Create Tweet{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+  <div class="card shadow-lg rounded-4 p-4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+    <h2 class="text-center text-gradient mb-4">
+      {% if form.instance.pk %}✏️ Edit Your Chirp{% else %}🕊️ Create a New Chirp{% endif %}
+    </h2>
+
+    <form method="post" enctype="multipart/form-data" id="tweetForm">
+      {% csrf_token %}
+      <div class="mb-3 text-light">
+        {{ form.as_p }}
+      </div>
+
+      <!-- Image Preview -->
+      <div class="mb-3 text-center">
+        <img id="imagePreview" src="#" alt="Preview" style="display:none; max-width:100%; border-radius:12px; margin-top:10px;">
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <a href="{% url 'tweet_list' %}" class="btn btn-outline-secondary rounded-pill">← Back</a>
+        <button class="btn btn-primary rounded-pill px-4" type="submit">
+          {% if form.instance.pk %}Update Chirp{% else %}Post Chirp{% endif %}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Custom Styling -->
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  input, textarea, select {
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    color: #fff !important;
+    border-radius: 10px !important;
+    padding: 10px;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #00c6ff !important;
+    box-shadow: 0 0 8px #00c6ff !important;
+  }
+
+  .btn-primary {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 15px #00c6ff;
+    transform: scale(1.03);
+  }
+</style>
+
+<!-- Image Preview Script -->
+<script>
+  const fileInput = document.querySelector('input[type="file"]');
+  const preview = document.getElementById('imagePreview');
+
+  if (fileInput) {
+    fileInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.style.display = 'block';
+          preview.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      } else {
+        preview.style.display = 'none';
+      }
+    });
+  }
+</script>
+{% endblock %}
