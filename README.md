@@ -114,6 +114,8 @@ Users can edit or delete only their own tweets.
 
 Search bar allows filtering tweets by text or username.
 
+## ScreenShots
+![Chirper](WhatsApp Image 2025-10-31 at 11.49.56_0d672f38.jpg)
 ## 💡 Future Enhancements
 
 User profile pages with bio & followers
