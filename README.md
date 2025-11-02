@@ -1,6 +1,6 @@
-# 🐦 Chirper — A Mini Twitter Clone using Django
+# 🐦 Chirper — A Blogging website using Django
 
-**Chirper** is a simple Django-based web application that allows users to register, log in, and share short posts (tweets) with optional images.  
+**Chirper** is a simple Django-based web application that allows users to register, log in, and share short posts (chirps) with optional images.  
 It’s designed as a beginner-friendly project to understand how authentication, CRUD operations, and templates work in Django.
 
 ---
@@ -11,15 +11,15 @@ It’s designed as a beginner-friendly project to understand how authentication,
   - Register new users
   - Login & logout functionality
 - 📝 **Tweet Management**
-  - Create, edit, and delete tweets
+  - Create, edit, and delete chirps
   - Attach images to tweets
 - 🔍 **Search**
-  - Search tweets by content or username
+  - Search chirps by content or username
 - 🎨 **UI**
   - Responsive design with Bootstrap
   - Simple and clean layout
 - 🔒 **Access Control**
-  - Only logged-in users can create, edit, or delete tweets
+  - Only logged-in users can create, edit, or delete chirps
 
 ---
 
@@ -28,9 +28,9 @@ It’s designed as a beginner-friendly project to understand how authentication,
 | Component  | Technology |
 |-------------|-------------|
 | **Frontend** | HTML, CSS, Bootstrap |
-| **Backend** | Django 5.x |
+| **Backend** | Django |
 | **Database** | SQLite (default) |
-| **Language** | Python 3.x |
+| **Language** | Python |
 
 ---
 
@@ -106,13 +106,13 @@ Chirper/
 
 Users register using a simple signup form.
 
-After login, they can post tweets with text or images.
+After login, they can post chirps with text or images.
 
 Tweets are listed on the homepage in reverse chronological order.
 
-Users can edit or delete only their own tweets.
+Users can edit or delete only their own chirps.
 
-Search bar allows filtering tweets by text or username.
+Search bar allows filtering chirps by text or username.
 
 ## ScreenShots
 ![Chirper](https://github.com/Viveksi-Taksali-27/Chirper/blob/85823bfb243feafb6806395afcf3cab5c66ec613/WhatsApp%20Image%202025-10-31%20at%2011.49.56_0d672f38.jpg)
@@ -122,7 +122,7 @@ User profile pages with bio & followers
 
 Like & comment system
 
-Pagination for tweet feed
+Pagination for the feed
 
 Dark/light mode toggle
 
