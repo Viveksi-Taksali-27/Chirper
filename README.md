@@ -129,6 +129,7 @@ Dark/light mode toggle
 ## 👩‍💻 Author
 
 Viveksi Taksali
+📧 viveksitaksali@gmail.com
 📍 GitHub: Viveksi-Taksali-27
 
 
